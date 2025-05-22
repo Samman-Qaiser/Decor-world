@@ -321,6 +321,7 @@ h6 {
   width: 100%;
 }
 
+
 .navbar-nav li {
   padding: 0px 20px 0px 20px !important;
   position: relative;
@@ -335,13 +336,7 @@ h6 {
 
   
 }
-.nav-links{
-  position: relative;
-  right: 10.5%;
-  width: 150%;
-   
-  display: inline-block;
-}
+
 
 .nav-link::before {
   content: "";
@@ -356,6 +351,13 @@ h6 {
   transition: 0.4s;
 }
 
+ #all-product-con{
+
+display: flex;
+width: 90%;
+border-bottom: 1px solid black;
+margin: auto;
+ }
 .navbar .dropdown-menu .dropdown-item {
   color: #1e1915 !important;
 }
