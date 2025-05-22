@@ -79,12 +79,14 @@
             <a class="nav-link" href="about.html">AboutUs</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="allproduct.html">Products</a>
-            <a class="nav-link dropdown-toggle ps-1" href="#" id="productDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-sort-down"></i>
+              <a class="nav-link dropdown-toggle" href="allproduct.html" id="navbarDropdown " role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Products<i class="fa-solid fa-sort-down"></i>
             </a>
+             
+            <!-- Dropdown menu -->
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="allproduct.html">All Products</a></li>
               <li class=""><a href="wallpapers.html">Wallpapers<i class="fa-solid fa-sort-down has_child"></i></a>
                 <ul class="sub-menu">
                   <li><a href="3dwallpapers.html">3D wallpapers</a></li>
@@ -520,7 +522,7 @@
     <div class="container-fluid">
       <div class="row">
         <p>
-          Copyright © 2024 <span>Decor World</span> All Rights Reserved.
+          Copyright © 2025 <span>Decor World</span> All Rights Reserved.
         </p>
       </div>
     </div>
@@ -573,14 +575,14 @@
    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("2TKVcBBfXo3-c-gjY"); // Replace with your actual public key from EmailJS
+    emailjs.init("dVo3aQuLqhBeFJvrM"); // Replace with your actual public key from EmailJS
   })();
 </script>
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_2zae35h', 'template_7dcqs1h', this)
+    emailjs.sendForm('service_7k8kvgd', 'template_apuvzhp', this)
       .then(function() {
         alert('Thank you! Your message has been sent.');
         document.getElementById('contact-form').reset();

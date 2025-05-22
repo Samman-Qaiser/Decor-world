@@ -1726,6 +1726,9 @@ p {
 
   .test-titl{
     font-size: 6px !important;
+  
+        margin-bottom: 14px;
+  
  
   }
 
@@ -1996,13 +1999,18 @@ p {
   padding: 25px 30px;
   background-color: #292e34;
   color: #fff;
+   text-align: center;
+
+   display: flex;
+   align-items: center;
 }
 
 .footer-bottom p {
   margin-bottom: 0px;
   font-size: 16px !important;
   color: #9b9b9b !important;
-  padding-left: 130px;
+
+  text-align: center;
 }
 
 .footer-bottom span {
@@ -2816,7 +2824,7 @@ header .navigation .menu {
   cursor: pointer;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:400px) {
   .containe {
     width: 200px !important;
     height: 200px !important;
@@ -3268,4 +3276,8 @@ header .navigation .menu {
   .bredcrb li {
     font-size: 12px;
   }
+      .test-titl {
+        font-size: 6px !important;
+        margin-bottom: 14px;
+    }
 }
