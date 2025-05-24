@@ -569,6 +569,25 @@
   <!-- <script src="js/jquery.min.js"> </script>
         <script src="js/owl.carousel.min.js"> </script> -->
   <!-- Nav-Bar  -->
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("9rkOFld7UBVn03MPu"); // Replace with your actual public key from EmailJS
+  })();
+</script>
+<script>
+  document.getElementById('ani').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_decorworld', 'template_oa1xl6p', this)
+      .then(function() {
+        alert('Thank you! Your message has been sent.');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert('Failed to send message.\n' + JSON.stringify(error));
+      });
+  });
+</script>
   <script>
     $(document).ready(function () {
       $(".navbar li i.has_child").each(function (index) {

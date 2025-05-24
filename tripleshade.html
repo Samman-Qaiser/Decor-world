@@ -355,41 +355,36 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <form id="ani" onsubmit="alert ()" action="">
-                      <div class="form-section p-3 ">
-                        <h4 class="about-nirala text-center">
-                          <b>Get <span class="estate">In </span> Touch With Us</b>
-                        </h4>
+                     <form id="ani" >
+                        <div class="form-section p-3 ">
+                          <h4 class="about-nirala text-center">
+                            <b>Get <span class="estate">In </span> Touch With Us</b>
+                          </h4>
+                          <br />
+                          <h5 class="estate text-center mt-0">
+                            Have a question or need assistance? <br> Feel free to connect with us
+                          </h5>
+                          <div class="w-0">
+                            <label for="" class="form-label mt-1"><b> Name</b></label>
+                            <input name="name" type=" text" class="form-control" placeholder="Enter your Name" required />
 
-                        <h5 class="estate text-center mt-0">
-                          Have a question or need assistance? <br> Feel free to connect with us
-                        </h5>
-                        <div class="w-0 text-start">
-                          <label for="" class="form-label mt-1"><b> Name</b></label>
-                          <input type=" text" class="form-control" placeholder="Enter your Name" required />
+                            <label for="" class="form-label mt-2"><b> Email</b></label>
+                            <input name="email" type=" text" class="form-control" placeholder="Enter your Email" required />
 
-                          <label for="" class="form-label mt-2"><b> Email</b></label>
-                          <input type=" text" class="form-control" placeholder="Enter your Email" required />
+                            <label for="" class="form-label mt-2"><b>Contact No</b></label>
+                            <input name="phone" type="number" class="form-control" placeholder="Enter your Number" required />
+                            <label for="" class="form-label mt-2"><b>Message</b></label>
 
-                          <label for="" class="form-label mt-2"><b>Contact No</b></label>
-                          <input type="number" class="form-control" placeholder="Enter your Number" required />
-                          <label for="" class="form-label mt-2"><b>Message</b></label>
+                            <textarea name="message" rows="2" cols="58" class="form-control mt-1" placeholder="Message..."></textarea>
 
-                          <textarea rows="2" cols="58" class="form-control mt-1" placeholder="Message..."></textarea>
-
-                          <div class="col-12 text-center mt-1 pt-2">
-                            <button class="submit-btn" type="submit">
-                              Submit
-                            </button>
+                            <div class="col-12 text-center mt-1 pt-2">
+                              <button class="submit-btn" type="submit">
+                                Submit
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </form>
-                    <script>
-                      function alert() {
-                        confirm("success");
-                      }
-                    </script>
+                      </form>
                   </div>
                 </div>
               </div>
@@ -566,6 +561,25 @@
   <!-- <script src="js/jquery.min.js"> </script>
           <script src="js/owl.carousel.min.js"> </script> -->
   <!-- Nav-Bar  -->
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("9rkOFld7UBVn03MPu"); // Replace with your actual public key from EmailJS
+  })();
+</script>
+<script>
+  document.getElementById('ani').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_decorworld', 'template_oa1xl6p', this)
+      .then(function() {
+        alert('Thank you! Your message has been sent.');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert('Failed to send message.\n' + JSON.stringify(error));
+      });
+  });
+</script>
   <script>
     $(document).ready(function () {
       $(".navbar li i.has_child").each(function (index) {
